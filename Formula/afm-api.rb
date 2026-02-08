@@ -9,15 +9,29 @@ class AfmApi < Formula
   depends_on :macos
 
   def install
-    bin.install "bin/afm-api"
-    pkgshare.install "src/afm-api.swift"
-
-    # Make the launcher reference the Homebrew-installed Swift source path.
-    inreplace bin/"afm-api", %r{\$SCRIPT_DIR/\.\./src/afm-api.swift}, "#{pkgshare}/afm-api.swift"
+    if File.exist?("afm-api") && File.exist?("afm-api-server")
+      # Binary release asset path (no local build required).
+      bin.install "afm-api"
+      bin.install "afm-api-server"
+    else
+      # Source release fallback.
+      bin.install "bin/afm-api"
+      pkgshare.install "Package.swift"
+      pkgshare.install "Sources"
+      launcher = bin/"afm-api"
+      if launcher.read.include?("__AFM_API_VERSION__")
+        inreplace launcher, "__AFM_API_VERSION__", version.to_s
+      end
+    end
   end
 
   test do
     assert_predicate bin/"afm-api", :exist?
-    assert_predicate pkgshare/"afm-api.swift", :exist?
+    if (bin/"afm-api-server").exist?
+      assert_predicate bin/"afm-api-server", :exist?
+    else
+      assert_predicate pkgshare/"Package.swift", :exist?
+      assert_predicate pkgshare/"Sources/AFMAPI/main.swift", :exist?
+    end
   end
 end
