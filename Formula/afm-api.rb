@@ -3,7 +3,7 @@ class AfmApi < Formula
   homepage "https://github.com/tankibaj/apple-foundation-model-api"
   url "https://github.com/tankibaj/apple-foundation-model-api/releases/download/v1.2.3/afm-api-macos-arm64.tar.gz"
   version "1.2.3"
-  sha256 "041fa46bb492808243fd3da22b6566038d47cda273f522f491b1d6923993c01c"
+  sha256 "515c943c0929f354079113b0758c0e8529964a7b965051271781b261a271db56"
   license "MIT"
 
   depends_on :macos
