@@ -1,4 +1,4 @@
-class AfmApi < Formula
+class AfmApiAT12 < Formula
   desc "OpenAI-compatible local server for Apple Foundation Model"
   homepage "https://github.com/tankibaj/apple-foundation-model-api"
   url "https://github.com/tankibaj/apple-foundation-model-api/releases/download/v1.2.0/afm-api-macos-arm64.tar.gz"
