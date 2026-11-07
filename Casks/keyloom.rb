@@ -1,8 +1,8 @@
-# Source of truth for the tap cask. The release workflow renders 0.0.2 and beb80d87c1f88f6a6484994d54a0b6e6c20f7c59ea46c070ea3528c3d1804984
+# Source of truth for the tap cask. The release workflow renders 0.0.2 and 550bca1da009ce14b7d975851e7206f183b79411272b8119f9caefed2cdaa20e
 # and commits the result to tankibaj/homebrew-tap as Casks/keyloom.rb.
 cask "keyloom" do
   version "0.0.2"
-  sha256 "beb80d87c1f88f6a6484994d54a0b6e6c20f7c59ea46c070ea3528c3d1804984"
+  sha256 "550bca1da009ce14b7d975851e7206f183b79411272b8119f9caefed2cdaa20e"
 
   url "https://github.com/tankibaj/keyloom/releases/download/v#{version}/Keyloom-#{version}-arm64.zip"
   name "Keyloom"
