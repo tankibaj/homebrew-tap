@@ -1,8 +1,8 @@
-# Source of truth for the tap cask. The release workflow renders 0.1.5 and 3d4be919a8f457ba55cec9711ad4ff74b3a0b9725cc2a99b187cf78d22148cbb
+# Source of truth for the tap cask. The release workflow renders 0.1.6 and 67019fdac0964f26a8564239c34be6072f89fa480fc374e0997b0ec91d642357
 # and commits the result to tankibaj/homebrew-tap as Casks/lotse.rb.
 cask "lotse" do
-  version "0.1.5"
-  sha256 "3d4be919a8f457ba55cec9711ad4ff74b3a0b9725cc2a99b187cf78d22148cbb"
+  version "0.1.6"
+  sha256 "67019fdac0964f26a8564239c34be6072f89fa480fc374e0997b0ec91d642357"
 
   url "https://github.com/tankibaj/lotse/releases/download/v#{version}/Lotse-#{version}-arm64.zip"
   name "Lotse"
